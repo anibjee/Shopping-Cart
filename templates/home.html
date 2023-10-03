@@ -1,12 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Welcome</title>
+<title>SAMstore</title>
 <link rel="stylesheet" href={{ url_for('static', filename='css/home.css') }} />
 <link rel="stylesheet" href={{ url_for('static', filename='css/topStyle.css') }} />
+<link href="../static/favicon.ico" rel="icon" type="image/x-icon">
 </head>
 <body>
 <div id="title">
+    <h1 id="samstore">SAMstore</h1>
 	<a href="/">
 		<img id="logo" src= {{ url_for('static', filename='images/logo.png') }} />
 	</a>
@@ -46,18 +48,18 @@
 			{% endfor %}
 		</ul>
 	</div>
-	<div>
+	<div class="products">
 		<h2>Items</h2>
 		{% for data in itemData %}
 		<table>
-			<tr id="productName">
+			<tr id="productName" class="product">
 				{% for row in data %}
 				<td>
 					{{row[1]}}
 				</td>
 				{% endfor %}
 			</tr>
-			<tr id="productImage">
+			<tr id="productImage" class="product">
 				{% for row in data %}
 				<td>
 					<a href="/productDescription?productId={{row[0]}}">
@@ -66,10 +68,10 @@
 				</td>
 				{% endfor %}
 			</tr>
-			<tr id="productPrice">
+			<tr id="productPrice" class="product">
 				{% for row in data %}
 				<td>
-					${{row[2]}}
+					₹{{row[2]}}
 				</td>
 				{% endfor %}
 			</tr>

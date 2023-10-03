@@ -1,3 +1,7 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
 #logo {
 	height: 40px;
 	width: 50px;
@@ -9,7 +13,7 @@
 }
 
 #title {
-	background-color: black;
+	background-color: #333;
 	display: inline-block;
 	width: 100%;
 }
@@ -80,6 +84,9 @@
 	margin-left: 20px;
 	margin-right: 20px;
 	float: left;
+}
+#samstore {
+	color: white;
 }
 #kart {
 	color: white;
